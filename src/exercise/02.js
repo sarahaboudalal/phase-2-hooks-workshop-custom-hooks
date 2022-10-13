@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 
-/* ✅ modify this usePokemon custom hook to take in a query as an argument */
+
 export function usePokemon(query) {
-  /* ✅ this hook should only return one thing: an object with the pokemon data */
+ 
   const [pokemon, setPokemon] = useState(null);
 
   useEffect(() => {
@@ -18,12 +18,9 @@ export function usePokemon(query) {
 }
 
 function Pokemon() {
-  /* 
-   ✅ move the code from the useState and useEffect hooks into the usePokemon hook
-   then, call the usePokemon hook to access the pokemon data in this component
-  */
+
 const { data: pokemon } = usePokemon()
-  // 🚫 don't worry about the code below here, you shouldn't have to touch it
+  
   if (!pokemon) return <h3>Loading...</h3>;
 
   return (
